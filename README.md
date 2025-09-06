@@ -66,19 +66,24 @@ fifo_n_wr_n_rd_test: Extended test that runs a sequence with configurable number
 Controls simulation execution by raising/dropping objections and applying drain time for clean shutdown.
 
 # Test
+
 mem_test.sv – Defines the overall test, configures the environment, and controls sequence execution.
 
 # Top
+
 top.sv-Instantiates DUT and connects it with the UVM testbench.
 
 # Run
+
 run.do-Simulation script (likely for ModelSim/Questa/Synopsis) to compile and run the project.
 
 # Common
+
 This file is used to keep all the required transactions in it.
 
+# Transaction class
 
-
+We use both write and read transactions since we are using aysnchronous fifo where both write and read transactions happen at differnt time.
 
 
 
